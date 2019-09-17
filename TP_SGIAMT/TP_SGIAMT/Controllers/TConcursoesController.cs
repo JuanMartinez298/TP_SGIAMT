@@ -18,6 +18,7 @@ namespace TP_SGIAMT.Controllers
             _context = context;
         }
 
+
         // GET: TConcursoes
         public async Task<IActionResult> Index()
         {
