@@ -1,0 +1,59 @@
+﻿@model TP_SGIAMT.Models.TConcurso
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Actualizar</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PkIcIdConcurso" />
+            <div class="form-group">
+                <label asp-for="VcNombreCon" class="control-label">Nombre del Concurso</label>
+                <input asp-for="VcNombreCon" class="form-control" />
+                <span asp-validation-for="VcNombreCon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VcLugarCon" class="control-label">Lugar del Concurso</label>
+                <input asp-for="VcLugarCon" class="form-control" />
+                <span asp-validation-for="VcLugarCon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DcFechaConcurso" class="control-label">Fecha del Concurso</label>
+                <input asp-for="DcFechaConcurso" class="form-control" type="date" />
+                <span asp-validation-for="DcFechaConcurso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkIecIdEstado" class="control-label">Estado del Concurso</label>
+                <select asp-for="FkIecIdEstado" class="form-control" asp-items="ViewBag.FkIecIdEstado"></select>
+                <span asp-validation-for="FkIecIdEstado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group col-md-6">
+                    <label asp-for="IcCantidadSeri" class="control-label">Cantidad de Seriados</label>
+                    <input asp-for="IcCantidadSeri" class="form-control" />
+                    <span asp-validation-for="IcCantidadSeri" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="IcCantidadNove" class="control-label">Cantidad de Novel</label>
+                    <input asp-for="IcCantidadNove" class="form-control" />
+                    <span asp-validation-for="IcCantidadNove" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-success" />
+                <a class="btn btn-danger" asp-action="Index">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
