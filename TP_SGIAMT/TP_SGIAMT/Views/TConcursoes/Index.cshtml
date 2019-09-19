@@ -45,30 +45,23 @@
                         @Html.DisplayFor(modelItem => item.FkIecIdEstadoNavigation.VeNombreEsta)
                     </td>
                     <td>
+
                         @if (item.FkIecIdEstadoNavigation.VeNombreEsta == "Finalizado")
                         {
+                        <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.PkIcIdConcurso">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
                         }
                         else
                         {
                             <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.PkIcIdConcurso">
-                                <span class="glyphicon glyphicon-pencil"></span></a>
-                        }
-
-                            <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.PkIcIdConcurso">
-                                <span class="glyphicon glyphicon-eye-open"></span>
-                                
+                                <span class="glyphicon glyphicon-pencil"></span>
                             </a>
-
-                    @if (item.FkIecIdEstadoNavigation.VeNombreEsta == "Finalizado")
-                    {
-                    }
-                    else
-                    {
                             <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.PkIcIdConcurso">
                                 <span class="glyphicon glyphicon-trash"></span>
                             </a>
 
-                    }
+                        }
                     </td>
                 </tr>
             }
@@ -77,6 +70,9 @@
 
     </table>
     <div class="form-group col-md-4">
-        <a class="btn btn-success" asp-action="Create">Crear Concurso</a>
+        <a class="btn btn-success" asp-action="Create">
+            Crear Concurso
+            <span class="glyphicon glyphicon-registration-mark"></span>
+        </a>
     </div>
 </div>

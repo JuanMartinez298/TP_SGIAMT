@@ -28,10 +28,10 @@
                     <input asp-for="DcFechaConcurso" class="form-control" type="date" />
                     <span asp-validation-for="DcFechaConcurso" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+                @*<div class="form-group">
                     <label asp-for="FkIecIdEstado" class="control-label">Estado del Concurso</label>
-                    <select asp-for="FkIecIdEstado" class="form-control" asp-items="ViewBag.FkIecIdEstado" disabled></select>
-                </div>
+                    <select asp-for="FkIecIdEstado" class="form-control" asp-items="ViewBag.FkIecIdEstado" name="FkIecIdEstado" disabled></select>
+                </div>*@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label asp-for="IcCantidadSeri" class="control-label"></label>

@@ -61,11 +61,13 @@ namespace TP_SGIAMT.Controllers
         {
             if (ModelState.IsValid)
             {
+                tConcurso.FkIecIdEstado = 1;
                 _context.Add(tConcurso);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["FkIecIdEstado"] = new SelectList(_context.TEstadoCon, "PkIeIdEstado", "VeNombreEsta", tConcurso.FkIecIdEstado);
+
+            //ViewData["FkIecIdEstado"] = new SelectList(_context.TEstadoCon, "PkIeIdEstado", "VeNombreEsta", tConcurso.FkIecIdEstado);
             return View(tConcurso);
         }
 

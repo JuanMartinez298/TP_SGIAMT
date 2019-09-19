@@ -7,41 +7,40 @@
 <h2>Detalle del Curso</h2>
 
 <div>
-    <h4>TConcurso</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.VcNombreCon)
+        <dt scope="col">
+            Nombre Concurso
         </dt>
         <dd>
             @Html.DisplayFor(model => model.VcNombreCon)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.VcLugarCon)
+        <dt scope="col">
+            Lugar Concurso
         </dt>
         <dd>
             @Html.DisplayFor(model => model.VcLugarCon)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DcFechaConcurso)
+        <dt scope="col">
+            Fecha Concurso
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.DcFechaConcurso)
+            @Html.ValueFor(model => model.DcFechaConcurso, "{0:dd/MM/yyyy}")
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IcCantidadSeri)
+        <dt scope="col">
+            Cantidad de Seriado
         </dt>
         <dd>
             @Html.DisplayFor(model => model.IcCantidadSeri)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IcCantidadNove)
+        <dt scope="col">
+            Cantidad de Nobel
         </dt>
         <dd>
             @Html.DisplayFor(model => model.IcCantidadNove)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.FkIecIdEstadoNavigation.VeNombreEsta)
+        <dt scope="col">
+            Estado del Concurso
         </dt>
         <dd>
             @Html.DisplayFor(model => model.FkIecIdEstadoNavigation.VeNombreEsta)
@@ -49,5 +48,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class=" btn btn-primary" asp-action="Index">Regresar</a>
 </div>
