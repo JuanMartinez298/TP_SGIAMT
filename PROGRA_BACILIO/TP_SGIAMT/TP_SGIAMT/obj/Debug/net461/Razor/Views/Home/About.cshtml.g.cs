@@ -82,7 +82,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("</h2>\r\n            </div>\r\n            <div class=\"panel-body form-group\">\r\n                <label class=\"form-group\">Modalidad de Concurso:</label>\r\n                <select class=\"form-control\">\r\n                    ");
             EndContext();
             BeginContext(693, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05b1994e646441a8bbfd9dcaf7035be3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c9d04fd93ed4c0fbba2438739de364b", async() => {
                 BeginContext(701, 20, true);
                 WriteLiteral("Seleccione Modalidad");
                 EndContext();
@@ -102,7 +102,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(752, 35, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53bcef401be84c059146d2e3f5652aac", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddaf6941b9fa4afc86db93d3d8cea823", async() => {
                 BeginContext(771, 7, true);
                 WriteLiteral("Seriado");
                 EndContext();
@@ -124,7 +124,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(809, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90764ad0785a4eb8869e786a8856c30c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ed8e24dfdcc4b9ca0ac76f75653340c", async() => {
                 BeginContext(827, 5, true);
                 WriteLiteral("Novel");
                 EndContext();

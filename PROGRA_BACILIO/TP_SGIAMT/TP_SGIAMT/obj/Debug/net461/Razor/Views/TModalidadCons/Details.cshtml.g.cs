@@ -84,7 +84,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(393, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d83a83b0c6e46bc867b32b0859c89bb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54c61dd1060849de9be1fdc817465726", async() => {
                 BeginContext(452, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -119,7 +119,7 @@ using TP_SGIAMT.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(468, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6a0b755e9a1426a9fbc5c3ea0fd26d2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4231f35e0ee34af5b46708bbc3e70563", async() => {
                 BeginContext(490, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

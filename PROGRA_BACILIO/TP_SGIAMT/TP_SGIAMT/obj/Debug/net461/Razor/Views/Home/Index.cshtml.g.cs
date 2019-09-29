@@ -82,7 +82,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("</h2>\r\n            </div>\r\n            <div class=\"panel-body form-group\">\r\n                <label class=\"form-group\">Modalidad de Concurso:</label>\r\n                <div class=\"form-group\">\r\n                    ");
             EndContext();
             BeginContext(685, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1dfa334d5fbf4673a5ea1ef97934926c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32f4df65654e4aba86f682b8524770fc", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();

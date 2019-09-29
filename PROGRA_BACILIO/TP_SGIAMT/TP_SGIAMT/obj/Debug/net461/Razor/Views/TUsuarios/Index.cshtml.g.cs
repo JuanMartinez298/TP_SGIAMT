@@ -70,7 +70,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n    <div class=\"container-fluid col-md-12 col-lg-12\" style=\"font-size:16px; font-family:\'Century Gothic\'\">\r\n\r\n\r\n        <h2 style=\"font-size:16px; font-family:\'Century Gothic\'\"></h2>\r\n\r\n        <p>\r\n            ");
             EndContext();
             BeginContext(306, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a0c4a97fc214b54a45b3d454565ec46", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b269a81ddfbe41fea2de493af089c84b", async() => {
                 BeginContext(350, 15, true);
                 WriteLiteral("Nuevo Registro ");
                 EndContext();
@@ -260,7 +260,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(4490, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "817ef9d9db3a4f3b94f79a057d0b1860", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "064d8579a30443b89e2d258f8dbe6e7f", async() => {
                 BeginContext(4565, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -296,7 +296,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(4702, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "907967bc0d04486996a6d90924baf052", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc6fabb72398492ab49ab96513f14ccb", async() => {
                 BeginContext(4780, 8, true);
                 WriteLiteral("Detalles");
                 EndContext();
@@ -332,7 +332,7 @@ using TP_SGIAMT.Models;
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(4919, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aaacf2e768c249d5a684f4f9ce2423ae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab77e5ae45b94edab27f6b147de20f72", async() => {
                 BeginContext(4995, 8, true);
                 WriteLiteral("Eliminar");
                 EndContext();
