@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TP_SGIAMT.Models.TConcurso>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VcNombreCon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VcLugarCon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DcFechaConcurso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IcCantidadSeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IcCantidadNove)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FkIecIdEstadoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VcNombreCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VcLugarCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DcFechaConcurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IcCantidadSeri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IcCantidadNove)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkIecIdEstadoNavigation.PkIeIdEstado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PkIcIdConcurso">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PkIcIdConcurso">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PkIcIdConcurso">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

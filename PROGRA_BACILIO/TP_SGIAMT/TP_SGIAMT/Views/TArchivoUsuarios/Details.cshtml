@@ -1,0 +1,24 @@
+﻿@model TP_SGIAMT.Models.TArchivoUsuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TArchivoUsuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VauArchivo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VauArchivo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PkIauIdArchivo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

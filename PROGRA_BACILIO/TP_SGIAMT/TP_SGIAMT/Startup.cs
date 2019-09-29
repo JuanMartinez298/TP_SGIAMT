@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TP_SGIAMT.Models;
 
 namespace TP_SGIAMT
 {
@@ -33,6 +35,15 @@ namespace TP_SGIAMT
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //Fetching Connection string from APPSETTINGS.JSON  
+            //var ConnectionString = Configuration.GetConnectionString("connection");
+
+            //Entity Framework  
+            //services.AddDbContext<DB_A4D4D9_BDSGIAMTContext>(options => options.UseSqlServer(ConnectionString));
+
+            var connection = @"Server=sql5045.site4now.net;Database=DB_A4D4D9_BDSGIAMT;User Id=DB_A4D4D9_BDSGIAMT_admin;Password=123456789gg;MultipleActiveResultSets=True;ConnectRetryCount=0";
+            services.AddDbContext<DB_A4D4D9_BDSGIAMTContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

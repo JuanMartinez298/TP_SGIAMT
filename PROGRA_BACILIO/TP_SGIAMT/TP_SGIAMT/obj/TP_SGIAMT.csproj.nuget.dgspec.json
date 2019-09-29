@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alumno.LABORATORIOS\\Documents\\repo\\TP_SGIAMT\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj": {}
+    "C:\\Proyectos\\visual studio\\TPII\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alumno.LABORATORIOS\\Documents\\repo\\TP_SGIAMT\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj": {
+    "C:\\Proyectos\\visual studio\\TPII\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alumno.LABORATORIOS\\Documents\\repo\\TP_SGIAMT\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj",
+        "projectUniqueName": "C:\\Proyectos\\visual studio\\TPII\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj",
         "projectName": "TP_SGIAMT",
-        "projectPath": "C:\\Users\\alumno.LABORATORIOS\\Documents\\repo\\TP_SGIAMT\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj",
-        "packagesPath": "C:\\Users\\alumno.LABORATORIOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alumno.LABORATORIOS\\Documents\\repo\\TP_SGIAMT\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\obj\\",
+        "projectPath": "C:\\Proyectos\\visual studio\\TPII\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\TP_SGIAMT.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\visual studio\\TPII\\PROGRA_BACILIO\\TP_SGIAMT\\TP_SGIAMT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alumno.LABORATORIOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net461"
@@ -62,8 +60,39 @@
             "Microsoft.AspNetCore.StaticFiles": {
               "target": "Package",
               "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.VisualStudio.Web.BrowserLink": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             }
-          }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
