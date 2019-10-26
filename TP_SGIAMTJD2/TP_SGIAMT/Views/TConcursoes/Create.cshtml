@@ -1,0 +1,68 @@
+﻿@model TP_SGIAMT.Models.TConcurso
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+    <section class="content-header">
+        <h2>Registrar Concurso</h2>
+    </section>
+
+<section>
+    <div class="box box-default">
+        <div class="box-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <div class="form-row">
+                                <label asp-for="VcNombreCon" class="control-label">Nombre Concurso</label>
+                                <input asp-for="VcNombreCon" class="form-control" />
+                                <span asp-validation-for="VcNombreCon" class="text-danger"></span>
+                            </div>
+                            <div class="form-row">
+                                <label asp-for="VcLugarCon" class="control-label">Lugar del Concurso</label>
+                                <input id="locationid" asp-for="VcLugarCon" class="form-control" />
+                                <span asp-validation-for="VcLugarCon" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DcFechaConcurso" class="control-label">Fecha del Concurso</label>
+                                <input asp-for="DcFechaConcurso" class="form-control" type="date" />
+                                <span asp-validation-for="DcFechaConcurso" class="text-danger"></span>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label asp-for="IcCantidadSeri" class="control-label">Cantidad P. Seriados</label>
+                                    <input asp-for="IcCantidadSeri" class="form-control" />
+                                    <span asp-validation-for="IcCantidadSeri" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label asp-for="IcCantidadNove" class="control-label">Cantidad P. Novel</label>
+                                    <input asp-for="IcCantidadNove" class="form-control" />
+                                    <span asp-validation-for="IcCantidadNove" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <br><br><br><br><br>
+                            <div class="form-group">
+                                <div class="form-group col-md-3">
+                                    <input type="submit" value="Registrar" class="btn btn-success" />
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <a class="btn btn-danger" asp-action="Index">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+        
+
+
+<link href="~/js/jquery/jquery-ui-autocomplete.css" rel="stylesheet" />
+<script src="~/js/jquery/dist/jquery.js"></script>
+<script src="~/js/jquery-ui/jquery-ui.js"></script>
+<script src="~/js/ViewScrips/ConcursoCrear.js"></script>
+

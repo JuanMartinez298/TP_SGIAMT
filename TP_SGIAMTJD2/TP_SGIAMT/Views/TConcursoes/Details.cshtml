@@ -1,0 +1,55 @@
+﻿@model TP_SGIAMT.Models.TConcurso
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="content-header">
+    <h2>Detalle del Curso</h2>
+</section>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt scope="col">
+            Nombre Concurso
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcNombreCon)
+        </dd>
+        <dt scope="col">
+            Lugar Concurso
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VcLugarCon)
+        </dd>
+        <dt scope="col">
+            Fecha Concurso
+        </dt>
+        <dd>
+            @Html.ValueFor(model => model.DcFechaConcurso, "{0:dd/MM/yyyy}")
+        </dd>
+        <dt scope="col">
+            Cantidad de Seriado
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IcCantidadSeri)
+        </dd>
+        <dt scope="col">
+            Cantidad de Nobel
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IcCantidadNove)
+        </dd>
+        <dt scope="col">
+            Estado del Concurso
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkIecIdEstadoNavigation.VeNombreEsta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class=" btn btn-primary" asp-action="Index">Regresar</a>
+</div>
