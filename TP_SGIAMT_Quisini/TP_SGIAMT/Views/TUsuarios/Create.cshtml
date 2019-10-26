@@ -1,0 +1,268 @@
+﻿@model TP_SGIAMT.Models.TUsuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+<section class="content-header">
+    <h1>Registrar Usuario</h1>
+</section>
+<!--Contenedor-->
+<section class="content">
+    <div class="box box-primary">
+        <!--Aqui empieza-->
+        <form asp-action="Create">
+            <div class="box-body">
+                @*<div class="form-group">
+                *@
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-row">
+                    <div class="col-md-12 form-group">
+                        <label asp-for="PkIuDni" class="control-label">DNI</label>
+                        <input asp-for="PkIuDni" class="form-control" />
+                        <span asp-validation-for="PkIuDni" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label asp-for="VuNombre" class="control-label">Nombre</label>
+                        <input asp-for="VuNombre" class="form-control" />
+                        <span asp-validation-for="VuNombre" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 form-group">
+                        <label asp-for="VuApaterno" class="control-label">Apellido Paterno</label>
+                        <input asp-for="VuApaterno" class="form-control" />
+                        <span asp-validation-for="VuApaterno" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label asp-for="VuAmaterno" class="control-label">Apellido Materno</label>
+                        <input asp-for="VuAmaterno" class="form-control" />
+                        <span asp-validation-for="VuAmaterno" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div style="overflow: hidden" class="form-group">
+                        <label asp-for="DuFechaNacimiento" class="control-label">Fecha de Nacimiento</label>
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input asp-for="DuFechaNacimiento" type='text' class="form-control pull-right" id='datepicker' onchange="javascript: calcularEdad();" />
+
+                        </div>
+                        <span asp-validation-for="DuFechaNacimiento" class="text-danger" id="result"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div style="overflow: hidden" class="form-group">
+                        <label asp-for="VuContraseña" class="control-label">Contraseña</label>
+                        <input asp-for="VuContraseña" type="password" class="form-control " id="inputPassword3" />
+                        <span asp-validation-for="VuContraseña" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div style="overflow: hidden" class="form-group">
+                        <label asp-for="VuSexo" class="control-label">Sexo</label>
+                        <select asp-for="VuSexo" class="form-control">
+                            <option value="" disabled selected>Seleccione...</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                        <span asp-validation-for="VuSexo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div style="overflow: hidden" class="form-group">
+                        <label asp-for="VuNacademia" class="control-label">Nombre Academia</label>
+                        <input asp-for="VuNacademia" class="form-control" />
+                        <span asp-validation-for="VuNacademia" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="FkIuCodCategoria" class="control-label">Categoria</label>
+                    <select asp-for="FkIuCodCategoria" id="cat" class="form-control" asp-items="ViewBag.FkIuCodCategoria">
+                        <option value="" disabled selected>Seleccione...</option>
+                    </select>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label asp-for="FkIauIdArchivo" class="control-label"></label>
+                    <select asp-for="FkIauIdArchivo" class="form-control" asp-items="ViewBag.FkIauIdArchivo"></select>
+                </div>
+                -->
+                <!--Columna 2-->
+                <!--
+                <div class="form-group">
+                    <label asp-for="FkItuTipoUsuario" class="control-label"></label>
+                    <select asp-for="FkItuTipoUsuario" class="form-control" asp-items="ViewBag.FkItuTipoUsuario"></select>
+                </div>
+                 -->
+                @*
+                    </div>*@
+            </div>
+            <div class="box-footer">
+                <input type="submit" value="Registrar" class="btn btn-primary" onclick="alerta()" />
+                <button type="button" class="btn btn-danger">  <a asp-action="Index">Back to List</a> </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(function () {
+        //Date picker
+        $('#datepicker').datepicker({
+            autoclose: true,
+            language: "es",
+            todayHighlight: true,
+            calcularEdad
+
+        })
+
+        //function alerta() {
+        //    alert(age);
+        //}
+    });
+
+    function isValidDate(day, month, year) {
+        var dteDate;
+
+        // En javascript, el mes empieza en la posicion 0 y termina en la 11
+        //   siendo 0 el mes de enero
+        // Por esta razon, tenemos que restar 1 al mes
+        month = month - 1;
+        // Establecemos un objeto Data con los valore recibidos
+        // Los parametros son: año, mes, dia, hora, minuto y segundos
+        // getDate(); devuelve el dia como un entero entre 1 y 31
+        // getDay(); devuelve un num del 0 al 6 indicando siel dia es lunes,
+        //   martes, miercoles ...
+        // getHours(); Devuelve la hora
+        // getMinutes(); Devuelve los minutos
+        // getMonth(); devuelve el mes como un numero de 0 a 11
+        // getTime(); Devuelve el tiempo transcurrido en milisegundos desde el 1
+        //   de enero de 1970 hasta el momento definido en el objeto date
+        // setTime(); Establece una fecha pasandole en milisegundos el valor de esta.
+        // getYear(); devuelve el año
+        // getFullYear(); devuelve el año
+        dteDate = new Date(year, month, day);
+
+        //Devuelva true o false...
+        return ((day == dteDate.getDate()) && (month == dteDate.getMonth()) && (year == dteDate.getFullYear()));
+    }
+
+    /**
+     * Funcion para validar una fecha
+     * Tiene que recibir:
+     *  La fecha en formato ingles yyyy-mm-dd
+     * Devuelve:
+     *  true-Fecha correcta
+     *  false-Fecha Incorrecta
+     */
+    function validate_fecha(fecha) {
+        var patron = new RegExp("^([0-9]{1,2})([/])([0-9]{1,2})([/])(19|20)+([0-9]{2})$");
+
+        if (fecha.search(patron) == 0) {
+            var values = fecha.split("/");
+            if (isValidDate(values[0], values[1], values[2])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Esta función calcula la edad de una persona y los meses
+     * La fecha la tiene que tener el formato yyyy-mm-dd que es
+     * metodo que por defecto lo devuelve el <input type="date">
+     */
+    function calcularEdad() {
+        var fecha = document.getElementById("datepicker").value;
+        if (validate_fecha(fecha) == true) {
+            // Si la fecha es correcta, calculamos la edad
+            var values = fecha.split("/");
+            var dia = values[0];
+            var mes = values[1];
+            var ano = values[2];
+
+            // cogemos los valores actuales
+            var fecha_hoy = new Date();
+            var ahora_ano = fecha_hoy.getYear();
+            var ahora_mes = fecha_hoy.getMonth() + 1;
+            var ahora_dia = fecha_hoy.getDate();
+
+            // realizamos el calculo
+            var edad = (ahora_ano + 1900) - ano;
+            if (ahora_mes < mes) {
+                edad--;
+            }
+            if ((mes == ahora_mes) && (ahora_dia < dia)) {
+                edad--;
+            }
+            if (edad > 1900) {
+                edad -= 1900;
+            }
+
+            // calculamos los meses
+            var meses = 0;
+            if (ahora_mes > mes)
+                meses = ahora_mes - mes;
+            if (ahora_mes < mes)
+                meses = 12 - (mes - ahora_mes);
+            if (ahora_mes == mes && dia > ahora_dia)
+                meses = 11;
+
+            // calculamos los dias
+            var dias = 0;
+            if (ahora_dia > dia)
+                dias = ahora_dia - dia;
+            if (ahora_dia < dia) {
+                ultimoDiaMes = new Date(ahora_ano, ahora_mes, 0);
+                dias = ultimoDiaMes.getDate() - (dia - ahora_dia);
+            }
+
+            document.getElementById("result").innerHTML = "Tienes " + edad + " años, " + meses + " meses y " + dias + " días";
+
+            var categoria = document.getElementById("cat");
+
+            if (4 <= edad && edad <= 6) {
+                categoria.selectedIndex = 3;
+            }
+            else if (7 <= edad && edad <= 9) {
+                categoria.selectedIndex = 2;
+            }
+            else if (10 <= edad && edad <= 13) {
+                categoria.selectedIndex = 4;
+            }
+            else if (14 <= edad && edad <= 17) {
+                categoria.selectedIndex = 5;
+            }
+            else if (18 <= edad && edad <= 21) {
+                çategoria.selectedIndex = 6;
+            }
+            else if (22 <= edad && edad <= 34) {
+                categoria.selectedIndex = 7;
+            }
+            else if (35 <= edad && edad <= 49) {
+                categoria.selectedIndex = 8;
+            }
+            else if (50 <= edad && edad <= 62) {
+                categoria.selectedIndex = 1;
+            }
+            else {
+                categoria.selectedIndex = 0;
+            }
+
+
+        } else {
+            document.getElementById("result").innerHTML = "La fecha " + fecha + " es incorrecta";
+        }
+    }
+
+
+</script>
+
+
+
+
+
+

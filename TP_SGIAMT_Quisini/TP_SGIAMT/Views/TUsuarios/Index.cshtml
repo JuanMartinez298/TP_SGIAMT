@@ -1,0 +1,138 @@
+﻿@model IEnumerable<TP_SGIAMT.Models.TUsuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section class="content-header">
+    <h1>
+        Usuarios
+    </h1>
+    <ol class="breadcrumb"></ol>
+</section>
+<!--Contenido Principal-->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header"><a asp-action="Create">Crear Nuevo</a></div>
+
+                <div class="box-body">
+
+                    <div class="table-responsive">
+                        <table id="example1" class="table table-bordered table-striped table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VuNombre)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VuApaterno)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VuAmaterno)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DuFechaNacimiento)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VuContraseña)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VuSexo)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.VuNacademia)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FkItuTipoUsuarioNavigation)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FkIuCodCategoriaNavigation)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VuNombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VuApaterno)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VuAmaterno)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DuFechaNacimiento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VuContraseña)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VuSexo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.VuNacademia)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FkItuTipoUsuarioNavigation.PkItuTipoUsuario)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FkIuCodCategoriaNavigation.PkIcCodCat)
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.PkIuDni">Editar</a> |
+                                            <a asp-action="Details" asp-route-id="@item.PkIuDni">Detalles</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.PkIuDni">Borrar</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- DataTables -->
+<script src="~/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="~/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- page script -->
+<script>
+    $(function () {
+        $('#example1').DataTable();
+    });
+    function Delete(id){
+        var txt;
+        var r = confirm("Are you sure you want to Delete?");
+        if (r == true) {
+
+            $.ajax(
+            {
+                type: "POST",
+                url: '@Url.Action("Delete", "Doctors")',
+                data: {
+                    id: id
+                },
+                error: function (result) {
+                    alert("error");
+                },
+                success: function (result) {
+                    if (result == true) {
+                        var baseUrl="/Doctors";
+                        window.location.reload();
+                    }
+                    else {
+                        alert("There is a problem, Try Later!");
+                    }
+                }
+            });
+        }
+    }
+</script>
